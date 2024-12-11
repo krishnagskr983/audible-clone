@@ -1,0 +1,215 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    to right bottom,
+    #404040,
+    #333333,
+    #262626,
+    #1a1a1a
+  );
+  min-height: 100vh;
+  color: white;
+}
+
+.title-box {
+  padding-top: 32px;
+}
+
+.title-heading {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container-box {
+  display: flex;
+  gap: 80px;
+  /* background-color: green; */
+  padding: 24px 48px;
+}
+
+.left-box {
+  width: 20%;
+  /* background-color: red; */
+  padding: 16px;
+}
+
+/* .category-box {
+  background-color: rgba(0, 195, 255, 0.413);
+} */
+
+.category-heading {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.category-list {
+  padding: 12px 24px;
+  /* background-color: rgb(234, 174, 100); */
+}
+
+.category-list-link {
+  list-style: none;
+  font-size: 16px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.category-list-link:hover {
+  text-decoration: underline;
+}
+
+/* .right-box {
+  width: 72%; */
+/* background-color: orange;
+} */
+
+/* .btn-header {
+  color: white;
+  font-weight: 600;
+}
+
+.btn-header:hover {
+  text-decoration: underline;
+} */
+
+/* .btn {
+  padding: 6px 10px;
+}
+
+.btn1 {
+  background-color: rgb(168, 162, 162);
+  color: black;
+} */
+
+.book_cards {
+  display: grid;
+  padding: 24px 32px;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+.book_card {
+  display: flex;
+  gap: 32px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(203, 199, 199, 0.582);
+  /* background-color: yellow; */
+}
+
+.photo_card {
+  width: 200px;
+  height: 272px;
+  box-shadow: 2px 2px 2px 4px rgba(128, 126, 126, 0.388);
+  border-radius: 8%;
+  background-color: rgba(203, 199, 199, 0.929);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.photo_card:hover {
+  transform: scale(1.03);
+}
+
+.details_card {
+  width: 36%;
+  padding: 16px 24px;
+  /* background-color: rgb(223, 98, 40); */
+}
+
+.details-heading {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.details-heading:hover,
+.details-highlight:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.details-text {
+  font-size: 16px;
+}
+
+.options_card {
+  width: 32%;
+  padding: 32px 24px;
+  /* background-color: rgb(44, 180, 92); */
+}
+
+.options-text {
+  font-size: 16px;
+}
+
+.currency-icon {
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: -4px;
+}
+
+.options-btn {
+  width: 220px;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 0;
+  background-color: #d4d1d1c6;
+  /* background-color: rgba(226, 125, 18, 0.944); */
+  margin-top: 16px;
+}
+
+.image-box {
+  overflow: hidden;
+}
+
+.book-img {
+  border-top-left-radius: 8%;
+  border-top-right-radius: 8%;
+  transition: all 0.4s ease-in-out;
+}
+
+.book-img:hover {
+  transform: scale(1.05);
+}
+
+.narrator {
+  font-size: 14px;
+  color: #201f1f;
+  font-weight: 400;
+  margin-top: 6px;
+  padding-left: 14px;
+}
+
+.narrator-name {
+  font-size: 14px;
+  color: black;
+  font-weight: 500;
+  padding-left: 14px;
+}
+
+.icons {
+  padding-left: 14px;
+  display: flex;
+  gap: 6px;
+}
+
+.orange-color {
+  color: rgb(219, 99, 7);
+}
+
+.next-prev {
+  width: 100%;
+}

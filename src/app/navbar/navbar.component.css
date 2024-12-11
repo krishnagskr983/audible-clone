@@ -1,0 +1,145 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-box {
+  background-color: black;
+  color: white;
+}
+
+.nav-box {
+  display: flex;
+  gap: 32px;
+  background-color: rgb(236, 230, 221);
+  background: linear-gradient(#4d4d4d, #4d4d4d);
+  background: linear-gradient(#a6a6a6, #a6a6a6);
+  padding: 12px 18px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.left_nav-box {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.right_nav-box {
+  display: flex;
+  gap: 124px;
+}
+
+.audible_logo-box {
+  display: flex;
+}
+
+.audible_logo-box img {
+  cursor: pointer;
+  margin: 0px auto;
+  border-radius: 30%;
+}
+
+.nav_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+}
+
+.nav_list-link {
+  color: black;
+  font-weight: 500;
+  border: none;
+  background: none;
+}
+
+.nav_list-link:hover {
+  text-decoration: underline;
+}
+
+.select_category {
+  height: 32px;
+  width: 180px;
+  padding-left: 12px;
+}
+
+.search-box {
+  display: flex;
+  height: 32px;
+}
+
+.search-in {
+  padding-left: 12px;
+  width: 240px;
+}
+
+.search-icon {
+  position: relative;
+  right: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.user-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-card {
+  width: 150px;
+  height: 200px;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
+  color: #fff;
+  padding: 16px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 80%;
+  right: 1%;
+  border-radius: 4%;
+  z-index: 10;
+  box-shadow: 0px 2px 10px 6px rgba(255, 255, 255, 0.222);
+}
+
+.profile-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-list-link {
+  font-size: 15px;
+  padding: 8px 40px 8px 0px;
+  cursor: pointer;
+  border-bottom: 1px solid #ffffff31;
+  transition: all 0.1s;
+}
+
+.profile-list-link:hover {
+  font-weight: bold;
+}
+
+.profile-text {
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px solid #333;
+}
+
+.categories {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

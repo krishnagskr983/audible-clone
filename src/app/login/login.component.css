@@ -1,0 +1,88 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.row {
+  padding-bottom: 40px;
+}
+
+.header-text {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+select {
+  margin-bottom: 8px;
+}
+
+.btn {
+  margin-top: 12px;
+  width: 100%;
+}
+
+.audible_logo-box {
+  margin: 0px auto;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+audible_logo img {
+  margin: 0px auto;
+  display: block;
+}
+
+.error-box {
+  width: 354px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border: 1px solid rgb(116, 9, 9);
+  margin: 0 auto;
+  padding: 10px 16px;
+  background-color: rgba(247, 242, 242, 0.957);
+  margin-bottom: 20px;
+  margin-top: 4px;
+}
+
+.error-icon {
+  font-size: 50px;
+}
+
+.error_text-box {
+  padding: 10px 10px 2px 10px;
+}
+
+.error-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 0.6;
+}
+
+error-msg {
+  font-size: 14px;
+}
+
+.reg_btn-box {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reg-text {
+  margin-bottom: 4px;
+  font-size: 14px;
+}

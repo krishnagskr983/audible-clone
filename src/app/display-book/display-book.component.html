@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <app-navbar></app-navbar>
+  </div>
+
+  <div class="details_container" *ngIf="this.book">
+    <div class="details_header-box">
+      <h1 class="details_header">Get Your Free Audiobook</h1>
+    </div>
+    <div class="details_box">
+      <div class="details_box-1">
+        <div class="image-box img-corner">
+          <img src="{{this.book.bookPhotoDTO.filePath}}" alt="Not Found" class="img-fluid book-img img-show">
+        </div>
+
+        <div>
+          <audio controls *ngIf="this.book.bookAudioDTO">
+            <source src="{{this.book.bookAudioDTO.filePath}}" type="{{this.book.bookAudioDTO.type}}" />
+            Your browser does not support audio
+          </audio>
+        </div>
+
+      </div>
+
+      <div class="details_box-2">
+        <p class="book-title">{{this.book.bookTitle}}</p>
+        <p class="book-overview">{{this.book.bookOverview}}</p>
+        <p class="text-color">
+          written by:
+          <span class="text-light">{{this.book.authorName}}</span>
+        </p>
+        <p class="text-color">
+          narrated by:
+          <span class="text-light">{{this.book.narratorName}}</span>
+        </p>
+        <p class="text-color">Length:
+          <span>{{this.book.length}}</span>
+        </p>
+        <div class="icons_rating-box">
+          <div class="details_icons">
+            <i class="bi bi-star-fill details_icon-color"></i>
+            <i class="bi bi-star-fill details_icon-color"></i>
+            <i class="bi bi-star-fill details_icon-color"></i>
+            <i class="bi bi-star-half details_icon-color"></i>
+            <i class="bi bi-star details_icon-color"></i>
+          </div>
+          <div>
+            <p>3.5({{this.book.ratings}} ratings)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="details_box-3">
+        <div class="buy_box">
+          <button class="buy_box-btn">Free with trial</button>
+        </div>
+
+        <ul class="buy_list">
+          <li class="buy_list-link">
+            <i class="bi bi-check2 icon-tick"></i>
+            <span class="icon-text">
+              1 credit a month to use on any title to download and keep
+            </span>
+          </li>
+          <li class="buy_list-link">
+            <i class="bi bi-check2 icon-tick"></i>
+            <span class="icon-text">
+              Listen to anything from the Plus Catalogue-thousands of Audible Originals, podcasts and audiobooks
+            </span>
+          </li>
+          <li class="buy_list-link">
+            <i class="bi bi-check2 icon-tick"></i>
+            <span class="icon-text">Download titles to your library and listen offline</span>
+          </li>
+          <li class="buy_list-link">
+            <i class="bi bi-check2 icon-tick"></i>
+            <span class="icon-text">Limited time offer: 2 months free trial</span>
+          </li>
+        </ul>
+        <div class="buy_box">
+          <button class="buy_box-btn price_tag-btn" (click)="addBookToLibrary(this.book.bookId)">
+            <span>Buy Now for</span>
+            <span class="price_tag">
+              <i class="bi bi-currency-rupee"></i>
+              {{this.book.bookPrice}}.00
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

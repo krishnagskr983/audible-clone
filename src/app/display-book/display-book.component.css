@@ -1,0 +1,149 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.details_container {
+  width: 100%;
+  background: linear-gradient(to right bottom, #0b0b0bd3, #0f0f0fea);
+  color: #fff;
+  padding-bottom: 64px;
+}
+
+.details_header-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details_header {
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+.details_box {
+  padding: 0px 140px;
+  display: grid;
+  grid-template-columns: 3fr 5fr 4fr;
+  gap: 30px;
+}
+
+.details_box-1 {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8%;
+}
+
+.image-box {
+  overflow: hidden;
+}
+
+.img-corner {
+  border-radius: 8%;
+}
+
+.book-img {
+  border-top-left-radius: 8%;
+  border-top-right-radius: 8%;
+  transition: all 0.4s ease-in-out;
+}
+
+.book-img:hover {
+  transform: scale(1.05);
+}
+
+.img-show {
+  border-radius: 8%;
+}
+
+audio {
+  margin-top: 8px;
+  height: 40px;
+  width: 100%;
+  margin-left: 0px;
+}
+
+.book-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.book-overview {
+  font-size: 20px;
+  font-weight: 600;
+  color: hsla(0, 0%, 100%, 0.486);
+  margin-bottom: 16px;
+}
+
+.text-color {
+  color: #d4d1d1c6;
+}
+
+.icons_rating-box {
+  display: flex;
+  gap: 8px;
+}
+
+.details_icons {
+  display: flex;
+  gap: 6px;
+}
+
+.details_icon-color {
+  color: #d4d1d1c6;
+}
+
+.buy_box {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.buy_box-btn {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 0;
+  background-color: #d4d1d1c6;
+}
+
+.buy_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px 4px;
+}
+
+.buy_list-link {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.icon-tick {
+  display: flex;
+  align-self: flex-start;
+  font-size: 32px;
+  color: #d4d1d1c6;
+}
+
+.icon-text {
+  font-size: 14px;
+}
+
+.price_tag-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.price_tag {
+  display: flex;
+  gap: 1px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <app-navbar></app-navbar>
+  </div>
+
+  <div class="container-box">
+    <div>
+      <div *ngIf="bookListToDisplay.length!=null && bookListToDisplay.length>0">
+        <div *ngIf="viewDetails">
+          <div class="book_cards">
+            <div *ngFor="let book of getBookListToDisplay()" class="book_card">
+              <a (click)="onBookClick(book)">
+                <div class="book_box">
+                  <div class="image-box">
+                    <img src="{{book.bookPhotoDTO.filePath}}" alt="Image Not Found" class="img-fluid book-img">
+                  </div>
+
+                  <div class="card_footer">
+                    <p class="narrator">Narrated by:</p>
+                    <p class="narrator-name">{{book.narratorName}}</p>
+                  </div>
+
+                  <div class="icons">
+                    <i class="bi bi-star-fill orange-color"></i>
+                    <i class="bi bi-star-fill orange-color"></i>
+                    <i class="bi bi-star-fill orange-color"></i>
+                    <i class="bi bi-star-half orange-color"></i>
+                    <i class="bi bi-star orange-color"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="text-center next-prev">
+            <button class="btn btn1" [disabled]="startIndex==0" (click)="onPrevious()">Previous Page</button>
+            &nbsp;
+            <button class="btn btn1" [disabled]="displayLength<=endIndex" (click)="onNext()">Next Page</button>
+          </div>
+          <br /><br />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="this.showBooks">
+    <div class="text-light text-center" style="font-size:20px">
+      No {{this.queryKey}} books available!!
+    </div>
+  </div>
+
+</body>
+
+</html>

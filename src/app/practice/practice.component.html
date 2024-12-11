@@ -1,0 +1,34 @@
+<p>practice works!</p>
+<!-- Hidden file input -->
+<!-- <input type="file" #fileInput style="display: none" (change)="handleFileInput($event)"> -->
+
+<!-- Upload Image button -->
+<!-- <button (click)="fileInput.click()">Upload Image</button> -->
+
+<!-- Display selected image -->
+<!-- <div *ngIf="selectedImage">
+  <h2>Selected Image:</h2>
+  <img [src]="selectedImage" alt="Selected Image">
+</div> -->
+
+
+
+<div *ngIf="photoCard" class="photo-card">
+
+  <div class="photo-btns">
+    <div>
+      <input type="file" #fileInput (change)="onUserPhotoSelected($event)" style="display:none" />
+    </div>
+    <div>
+      <button class="btn btn-primary">Remove Current Photo</button>
+    </div>
+    <div>
+      <button class="btn btn-secondary" (click)="closePhotoCard()">Cancel</button>
+    </div>
+  </div>
+
+  <div class="upload-btn">
+    <button class="btn btn-success" (click)="fileInput.click()">Upload Photo</button>
+  </div>
+
+</div>

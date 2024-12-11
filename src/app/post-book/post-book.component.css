@@ -1,0 +1,90 @@
+.container{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.row{
+  padding-bottom: 40px;
+}
+
+.header-text{
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+label{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input{
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+select{
+  margin-bottom: 8px;
+}
+
+.btn{
+  margin-top: 12px;
+  width:100%;
+}
+
+.audible_logo-box{
+  margin:0px auto;
+  width:50%;
+  display:flex;
+  align-items:flex;
+  justify-content: center;
+}
+
+.audible-logo img{
+  margin:0px auto;
+  display: block;
+}
+
+.register-modal{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  padding-bottom: 70px;
+  padding-top: 20px;
+}
+
+.register-box{
+  background-color: white;
+  margin:auto;
+  border:1px solid #b6b3b3;
+  padding:10px 40px 40px 40px;
+  border-radius: 8px;
+  position: sticky;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+  margin-top: 70px;
+}
+
+.pop-msg{
+  padding-top: 16px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.pop-btn{
+  margin-top: 4px;
+}
+
+.login-box{
+  margin-top: 32px;
+}
+
+.login-link{
+  border:none;
+  background-color: white;
+  color:#0f6471;
+  text-decoration: underline;
+}
+
+.login-link:hover{
+  color:#1a8393;
+}

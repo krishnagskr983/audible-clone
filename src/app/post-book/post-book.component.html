@@ -1,0 +1,147 @@
+<div>
+  <div class="audible_logo-box">
+    <img src="../../assets/Images/audible_logo.svg" alt="audible_logo" width="150" height="100">
+  </div>
+</div>
+
+
+<div class="container" *ngIf="hidePost">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card" style="padding:20px 30px 10px 30px">
+        <div class="text-center header-text">
+          Post Book
+        </div>
+        <form (ngSubmit)="submitBookForm()" #postForm="ngForm">
+          <div class="form-group">
+            <label for="bookTitle">Book Title</label>
+            <div class="input-group">
+              <input type="text" name="bookTitle" class="form-control" id="bookTitle"
+                [(ngModel)]="this.postBook.bookTitle" placeholder="Enter book title" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bookOverview">Book Overview</label>
+            <div class="input-group">
+              <input type="text" name="bookOverview" class="form-control" id="bookOverview"
+                [(ngModel)]="this.postBook.bookOverview" placeholder="Enter book overview" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Genre</label>
+            <div class="input-group">
+              <select name="genre" id="genre" class="form-control" [(ngModel)]="this.postBook.genre" required>
+                <option value="" class="text-secondary">-- Choose book genre --</option>
+                <option value="Biography">Biography</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Education">Education</option>
+                <option value="History">History</option>
+                <option value="Computer">Computer</option>
+                <option value="Literature">Literature</option>
+                <option value="Science">Science</option>
+                <option value="Health">Health</option>
+                <option value="Sports">Sports</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="from-group">
+            <label for="bookPrice">Book Price</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="bookPrice" id="bookPrice"
+                [(ngModel)]="this.postBook.bookPrice" placeholder="Enter book price" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="authorName">Author Name</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="authorName" id="authorName"
+                [(ngModel)]="this.postBook.authorName" placeholder="Enter author name" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="narratorName">Narrator Name</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="narratorName" id="narratorName"
+                [(ngModel)]="this.postBook.narratorName" placeholder="Enter narrator name" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="length">Book Length</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="length" id="length" [(ngModel)]="this.postBook.length"
+                placeholder="Enter book length" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="description" id="description"
+                [(ngModel)]="this.postBook.description" placeholder="Enter book description" required />
+            </div>
+          </div>
+
+          <div class="from-group">
+            <label for="ratings">Ratings</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="ratings" id="ratings" [(ngModel)]="this.postBook.ratings"
+                placeholder="Enter ratings" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bookPhoto">Book Photo</label>
+            <div class="input-group">
+              <input type="file" class="form-control" name="bookPhoto" id="bookPhoto"
+                [(ngModel)]="this.postBook.bookPhoto" (change)="onBookPhotoSelected($event)" accept="image/*"
+                required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bookAudio">Book Audio</label>
+            <div class="input-group">
+              <input type="file" class="form-control" name="bookAudio" id="bookAudio"
+                [(ngModel)]="this.postBook.bookAudio" (change)="onBookAudioSelected($event)" accept="audio/*"
+                required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="d-flex justify-content-center">
+              <button class="btn btn-success" type="submit" [disabled]="postForm.invalid"
+                style="color:rgb(242,239,235)">
+                Post
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="postSuccess" class="register-modal">
+  <div class="row col-md-4 register-box">
+    <img src="../../assets/Images/reg-success_logo.png" alt="register_success_logo" width="240" height="280">
+  </div>
+  <p class="text-success pop-msg text-center">Posted book Successfully!</p>
+  <button class="btn btn-success pop-btn" (click)="closePopup()">Ok</button>
+</div>
+
+<div *ngIf="postFailure" class="register-modal">
+  <div class="row col-md-4 register-box">
+    <img src="../../assets/Images/reg-failure_logo.png" alt="register_failure_logo" width="240" height="280">
+    <p class="text-danger pop-msg text-center">Book already exists!</p>
+    <button class="btn btn-danger pop-btn" (click)="closePopup()">Ok</button>
+  </div>
+</div>

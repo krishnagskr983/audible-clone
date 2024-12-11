@@ -1,0 +1,33 @@
+.photo-card {
+  background-color: #333;
+  width: 300px;
+  /* height: 200px; */
+  padding: 32px;
+  border-radius: 4%;
+  margin-left: 200px;
+  margin-top: 100px;
+  position: relative;
+}
+
+.photo-btns {
+  display: flex;
+  gap: 14px;
+  flex-direction: column;
+}
+
+.btn {
+  width: 100%;
+}
+
+.upload-btn {
+  width: 100%;
+  padding: 0px 32px;
+  position: absolute;
+  top: 0%;
+  /* top: 14%; */
+  left: 0;
+}
+
+/* .hidePhotoInput {
+  display: none;
+} */

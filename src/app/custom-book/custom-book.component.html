@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <div>
+    <app-navbar></app-navbar>
+  </div>
+
+  <div class="title-box">
+    <h2 class="title-heading">Showing results for this category</h2>
+  </div>
+
+  <div class="container-box">
+    <div class="left-box">
+      <div class="category-box">
+        <h3 class="category-heading">Categories</h3>
+        <ul class="category-list">
+          <li class="category-list-link" (click)='browseBooks("category-biography")'>Biography</li>
+          <li class="category-list-link" (click)='browseBooks("category-comedy")'>Comedy</li>
+          <li class="category-list-link" (click)='browseBooks("category-entertainment")'>Entertainment</li>
+          <li class="category-list-link" (click)='browseBooks("category-education")'>Education</li>
+          <li class="category-list-link" (click)='browseBooks("category-history")'>History</li>
+          <li class="category-list-link" (click)='browseBooks("category-computer")'>Computer</li>
+          <li class="category-list-link" (click)='browseBooks("category-literature")'>Literature</li>
+          <li class="category-list-link" (click)='browseBooks("category-science")'>Science</li>
+          <li class="category-list-link" (click)='browseBooks("category-health")'>Health</li>
+          <li class="category-list-link" (click)='browseBooks("category-sports")'>Sports</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="right-box">
+      <div class="book_cards" *ngIf="books.length!=null && books.length>0">
+        <div class="book_card" *ngFor="let book of books">
+          <div class="photo_card">
+            <a (click)="onBookClick(book)">
+              <div class="book_box">
+                <div class="image-box">
+                  <img src="{{book.bookPhotoDTO.filePath}}" alt="Image Not Found" class="img-fluid book-img">
+                </div>
+
+                <div class="card_footer">
+                  <p class="narrator">Narrated by:</p>
+                  <p class="narrator-name">{{book.narratorName}}</p>
+                </div>
+
+                <div class="icons">
+                  <i class="bi bi-star-fill orange-color"></i>
+                  <i class="bi bi-star-fill orange-color"></i>
+                  <i class="bi bi-star-fill orange-color"></i>
+                  <i class="bi bi-star-half orange-color"></i>
+                  <i class="bi bi-star orange-color"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="details_card">
+            <h4 class="details-heading" (click)="onBookClick(book)">{{book.bookTitle}}</h4>
+            <p class="details-text">{{book.bookOverview}}</p>
+            <p class="details-text ">Written by:
+              <span class="details-highlight">
+                {{book.authorName}}
+              </span>
+            </p>
+            <p class="details-text">Narrated by:
+              <span class="details-highlight">
+                {{book.narratorName}}
+              </span>
+            </p>
+            <p class="details-text">Length: {{book.length}}</p>
+            <p class="details-text">Release Date: 01-01-23</p>
+            <p class="details-text">Language: English</p>
+          </div>
+
+          <div class="options_card">
+            <p class="options-text">Regular price: <span class="currency-icon"><i
+                  class="fa-solid fa-indian-rupee-sign"></i></span>
+              {{book.bookPrice}}.00</p>
+            <button class="options-btn">Free with trial</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="books.length==null">
+    <div class="text-light text-center" style="font-size:20px">
+      No notifications available!!
+    </div>
+  </div>
+
+</body>
+
+</html>
