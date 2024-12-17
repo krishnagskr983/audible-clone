@@ -1,4 +1,16 @@
-# Audible Frontend
+# Audible Clone Website
+___
+![Alt text](./frontend/images/audible-home.png)
+A website where users can register, browse categories, search audiobooks, purchase, and listen to them, with notifications for new releases.
+
+# Technology Stack
+___
+- Frontend: Angular, TypeScript
+- Backend: Java, Spring Boot, Kafka and Elastic Search
+- Database: MongoDB
+
+# Frontend
+___
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
@@ -11,49 +23,31 @@ ng serve --o
 ```
 
 
-# Audible Backend
+# Backend
+___
 
-### Kafka Server
-1.Zookeeper
+### 1. Kafka Server
+1. Zookeeper
 
   --> Run command from kafka location
   
     .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
          
-2.Kafka
+2. Kafka
 
   --> Run command from kafka location
   
     .\bin\windows\kafka-server-start.bat .\config\server.properties
   
-### Elastic Search
-1.Click elasticsearch.bat file in bin folder to start.
+### 2. Elastic Search
+- Click elasticsearch.bat file in bin folder to start.
 
-### Features to add
-    1.Profile
-    2.Notification
-    3.Library
-    4.Friends(Follow, ViewProfile, Suggestions)
-    5.Chat
-    6.Status
-    7.Comments, Likes
-    8.Random Books(Suggestions)
-    9.Gateway
-    10.Swagger
-    11.Caching(Redis)
-    12.SonarQube
-    13.Unit Testing
-    14.Jenkins
-    15.Code Coverage
-    
-### Issues
-    1.Post-book frontend not working.
-    2.Audible logo change.
-    3.Book service layer impl, file local location need to observe.
-    4.Book Photos and Audios are storing in local frontend(src/assets).
-    
-### Audios to download
-    https://pixabay.com/music/search/top%20music/
-
-### Audible Photos             
-    https://www.audible.in/?ref_pageloadid=rKbVkwUt9CU84FB9&ref=a_pd_The-Be_t1_nav_header_logo&pf_rd_p=6d37d36e-ab1b-4d42-a46f-  11b21dfc71fe&pf_rd_r=CK35HZTDFKNDC6X5QJ4R&pageLoadId=1ef4zMbik2aqR2K2&creativeId=2e6787a2-0cd0-4a6e-afe0-05766cd505e5
+# Features
+___
+- Register and Sign In 
+- Profile 
+- Notification 
+- Library 
+- Home 
+- Books 
+- Search
