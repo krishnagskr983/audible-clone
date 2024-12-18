@@ -1,29 +1,22 @@
-# Audible Clone Website
-***
+## Audible Clone Website
 ![Alt text](./frontend/images/audible-home.png)
 A website where users can register, browse categories, search audiobooks, purchase, and listen to them, with notifications for new releases.
 
-# Technology Stack
-***
+
+## Technology Stack
 - Frontend: Angular, TypeScript
 - Backend: Java, Spring Boot, Kafka and Elastic Search
 - Database: MongoDB
 
-# Frontend
-***
 
+## Frontend
 ### Development Server
-
 Run the following command to start a development server:
-
 ```bash
 ng serve --o
 ```
 
-
-# Backend
-***
-
+## Backend
 ### 1. Kafka Server
 1. Zookeeper
 
